@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Welcome to Our Top-Secret Platform!</h2>
+<p>Only authorized agents can access missions. Beware of infiltration!</p>
+<ul>
+  <li><a href="{{ url_for('register') }}">Register (New Agent)</a></li>
+  <li><a href="{{ url_for('login') }}">Login</a></li>
+  <li><a href="{{ url_for('missions') }}">My Missions</a></li>
+
+</ul>
+{% endblock %}

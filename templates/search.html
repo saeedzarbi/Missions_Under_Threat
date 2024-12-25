@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Search Missions</h2>
+
+<form method="POST" action="{{ url_for('search_missions') }}">
+  <label>Keyword:</label>
+  <input type="text" name="keyword" placeholder="e.g. bomb, infiltration..." />
+  <button type="submit">Search</button>
+</form>
+
+{% if results is defined %}
+  {% if results %}
+    <h3>Search Results:</h3>
+    <ul>
+      {% for r in results %}
+      <li>Mission #{{ r[0] }} - {{ r[1][:50] }}{% if r[1]|length > 50 %}...{% endif %}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No missions found for this keyword.</p>
+  {% endif %}
+{% endif %}
+
+<p><a href="{{ url_for('missions') }}">Back to My Missions</a></p>
+{% endblock %}

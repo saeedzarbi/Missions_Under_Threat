@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Your Secret Missions</h2>
+{% if missions %}
+<ul>
+  {% for m in missions %}
+  <li>
+    <a href="{{ url_for('view_mission', mission_id=m[0]) }}">
+      Mission #{{ m[0] }} - {{ m[1][:30] }}{% if m[1]|length > 30 %}...{% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No missions yet.</p>
+{% endif %}
+
+<hr>
+<form action="{{ url_for('add_mission') }}" method="POST">
+  <label>New Mission Content:</label>
+  <textarea name="mission_content" placeholder="Write a new secret mission..." rows="4"></textarea>
+  <button type="submit">Add Mission</button>
+</form>
+<p><a href="{{ url_for('logout') }}">Logout</a></p>
+{% endblock %}

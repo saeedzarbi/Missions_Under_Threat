@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /* پس‌زمینه خاکستری روشن و متن تیره برای خوانایی بهتر */
+    background: #f5f5f5;
+    color: #333; /* متن به رنگ تیره */
+}
+
+header, nav, footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    color: #ee3c3c;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    /* متن پیش‌فرض در کانتینر هم تیره باشد */
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 8px 0;
+}
+
+button {
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3498db;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px 0 10px 0;
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+a.nav-link {
+    padding: 5px 10px;
+    background: #34495e;
+    border-radius: 3px;
+}
+
+a.nav-link:hover {
+    background: #3b5998;
+}
